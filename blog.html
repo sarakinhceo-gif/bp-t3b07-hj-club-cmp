@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합정 클럽 비교 | 블로그 - 합정 클럽 가이드</title>
+    <meta name="description" content="합정 클럽 비교 전문 블로그. 합정 클럽 씬의 역사, 음악적 특성, 데이터 기반 분석 인사이트를 제공합니다. 전문가의 시각으로 본 합정 클럽의 현재와 미래.">
+    <meta name="keywords" content="합정 클럽 비교, 합정 클럽 블로그, 합정 클럽 역사, 합정 클럽 문화, 합정 클럽 음악, 합정 클럽 인사이트, 합정 클럽 분석, 합정 클럽 트렌드, 합정 클럽 전문가, 합정 클럽 가이드">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://t3b07-hj-club-cmp.vercel.app/blog">
+    <meta property="og:title" content="합정 클럽 비교 | 블로그 - 합정 클럽 가이드">
+    <meta property="og:description" content="합정 클럽 비교 전문 블로그. 합정 클럽 씬의 역사, 음악적 특성, 데이터 기반 분석 인사이트를 제공합니다.">
+    <meta property="og:type" content="website">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --surface2: #1c1c1c;
+            --border: #2a2a2a;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #ff0055;
+            --accent2: #00f0ff;
+            --accent3: #ffcc00;
+            --font-mono: 'Courier New', monospace;
+            --font-sans: 'Helvetica Neue', Arial, sans-serif;
+            --spacing-unit: 8px;
+            --container-max: 1200px;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: calc(var(--spacing-unit) * 2);
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: var(--accent2);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: var(--accent);
+        }
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 3);
+        }
+        .section {
+            padding: calc(var(--spacing-unit) * 8) 0;
+        }
+        .section:first-of-type {
+            padding-top: calc(var(--spacing-unit) * 12);
+        }
+        .grid {
+            display: grid;
+            gap: calc(var(--spacing-unit) * 4);
+        }
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            border-left: 4px solid var(--accent);
+            padding-left: calc(var(--spacing-unit) * 2);
+        }
+        h2 {
+            font-size: 2rem;
+            color: var(--accent2);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: calc(var(--spacing-unit) * 1);
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent3);
+        }
+        p {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            font-size: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+            background: var(--accent);
+            color: var(--bg);
+            font-family: var(--font-mono);
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+        .btn-outline {
+            background: transparent;
+            border-color: var(--accent2);
+            color: var(--accent2);
+        }
+        .btn-outline:hover {
+            background: var(--accent2);
+            color: var(--bg);
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: calc(var(--spacing-unit) * 4);
+            border-radius: 0;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .card h3 {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 12px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+        .tag-accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .tag-accent2 {
+            border-color: var(--accent2);
+            color: var(--accent2);
+        }
+        .meta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: calc(var(--spacing-unit) * 2) 0;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+        nav ul li a {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent);
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            margin: 3px 0;
+            transition: all 0.3s;
+        }
+        .tel-link {
+            font-family: var(--font-mono);
+            color: var(--accent2);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+        .tel-link:hover {
+            color: var(--accent);
+        }
+        .blog-hero {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: calc(var(--spacing-unit) * 6);
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        .blog-hero .meta {
+            font-size: 0.9rem;
+        }
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .blog-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        .blog-content blockquote {
+            border-left: 4px solid var(--accent3);
+            padding-left: calc(var(--spacing-unit) * 3);
+            margin: calc(var(--spacing-unit) * 4) 0;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .blog-content ul, .blog-content ol {
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            padding-left: calc(var(--spacing-unit) * 4);
+        }
+        .blog-content li {
+            margin-bottom: calc(var(--spacing-unit) * 1);
+        }
+        .blog-content .data-box {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: calc(var(--spacing-unit) * 4);
+            margin: calc(var(--spacing-unit) * 4) 0;
+            font-family: var(--font-mono);
+        }
+        .blog-content .data-box p {
+            font-size: 0.95rem;
+            margin-bottom: calc(var(--spacing-unit) * 1);
+        }
+        .blog-content .data-box .highlight {
+            color: var(--accent3);
+            font-weight: 700;
+        }
+        .faq-section {
+            margin-top: calc(var(--spacing-unit) * 8);
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: calc(var(--spacing-unit) * 3) 0;
+        }
+        .faq-item h4 {
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+            color: var(--accent2);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            cursor: pointer;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: calc(var(--spacing-unit) * 6) 0;
+            margin-top: calc(var(--spacing-unit) * 8);
+        }
+        footer p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: calc(var(--spacing-unit) * 1);
+            }
+            .container {
+                padding: 0 calc(var(--spacing-unit) * 2);
+            }
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: calc(var(--spacing-unit) * 2);
+                gap: calc(var(--spacing-unit) * 2);
+            }
+            nav ul.open {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .blog-hero {
+                padding: calc(var(--spacing-unit) * 3);
+            }
+            .blog-hero h1 {
+                font-size: 1.8rem;
+            }
+            .blog-content {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">T3B07</a>
+            <button class="hamburger-menu" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="/">비교</a></li>
+                <li><a href="/blog" class="active">블로그</a></li>
+                <li><a href="/about">소개</a></li>
+                <li><a href="tel:0200000000" class="tel-link">문의</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="blog-hero">
+                    <div class="meta">
+                        <span class="tag tag-accent">인사이트</span>
+                        <span class="tag tag-accent2">데이터 분석</span>
+                        <span>2025.02.20</span>
+                        <span>|</span>
+                        <span>by 합정 클럽 비교 팀</span>
+                    </div>
+                    <h1>합정 클럽 비교: 데이터로 본 합정 클럽 씬의 진화</h1>
+                    <p>2015년부터 2025년까지, 합정 클럽 씬은 어떻게 변화했는가? 입장료, 음악 장르, 운영시간 데이터를 기반으로 한 심층 분석.</p>
+                </div>
+
+                <div class="blog-content">
+                    <p>합정은 서울의 대표적인 클럽 밀집 지역으로 자리 잡았다. 홍대의 상업화에 염증을 느낀 뮤지션과 파티 피플들이 합정으로 이동하면서, 이 지역은 독특한 클럽 문화를 형성하게 되었다. 본 글은 2015년부터 2025년까지의 데이터를 바탕으로 합정 클럽 씬의 진화 과정을 추적한다.</p>
+
+                    <h2>1. 합정 클럽 씬의 태동기 (2015-2018)</h2>
+                    <p>2015년, 합정에는 클럽이라 부를 만한 공간이 5개 미만이었다. 대부분의 공간은 라이브 하우스와 바의 중간 형태였다. 주요 클럽으로는 <strong>클럽 M</strong>과 <strong>클럽 S</strong>가 있었으며, 이들은 주로 인디 음악과 일렉트로닉을 믹스한 사운드를 제공했다. 당시 평균 입장료는 10,000원에서 15,000원 사이였다. 데이터에 따르면 2016년 합정 클럽의 주말 평균 방문자 수는 150명에 불과했다.</p>
+
+                    <div class="data-box">
+                        <p><span class="highlight">2015-2018 합정 클럽 핵심 데이터</span></p>
+                        <p>• 활성 클럽 수: 4개 → 8개</p>
+                        <p>• 평균 입장료: 12,000원</p>
+                        <p>• 주요 장르: 인디 록, 테크노, 하우스</p>
+                        <p>• 주말 평균 방문자: 150명 → 280명</p>
+                    </div>
+
+                    <h2>2. 폭발적 성장기 (2019-2022)</h2>
+                    <p>2019년은 합정 클럽 씬의 전환점이었다. <strong>클럽 V</strong>와 <strong>클럽 B</strong>가 오픈하면서 합정은 본격적인 클럽 허브로 부상했다. 이 시기의 특징은 장르의 전문화였다. 각 클럽은 특정 음악 장르에 집중하기 시작했다. 예를 들어, <strong>클럽 V</strong>는 테크노와 미니멀에 특화되었고, <strong>클럽 B</strong>는 힙합과 R&B를 표방했다. 2020년 팬데믹으로 일시적 침체를 겪었으나, 2021년 하반기부터 빠르게 회복했다. 2022년 기준 합정 클럽의 평균 입장료는 20,000원으로 인상되었고, 주말 평균 방문자 수는 500명을 돌파했다.</p>
+
+                    <blockquote>"합정 클럽 씬의 성장은 단순한 숫자의 증가가 아닙니다. 각 클럽이 고유의 정체성을 확립하고, 그에 맞는 충성도 높은 관객을 형성했다는 점에서 질적 성장이었다고 평가할 수 있습니다." — 합정 클럽
+</body>
+</html>
