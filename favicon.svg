@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
-  <metadata>BPaaS site identity 9cee6d149d13c3cf</metadata>
-  <rect width="64" height="64" rx="8" fill="hsl(214 68% 37%)"/>
-  <path d="M38 0h26v64H24Z" fill="hsl(11 74% 57%)" opacity="0.82"/>
-  <g transform="rotate(341 32 32)" opacity="0.42"><path d="M14 20h36L32 50Z" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round"/></g>
-  <text x="32" y="39" text-anchor="middle" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="0">HC</text>
+  <title>합정 클럽 비교</title>
+  <rect width="64" height="64" rx="17" fill="hsl(214 62% 37%)"/>
+  <g transform="rotate(90 32 32)"><circle cx="16" cy="16" r="5" fill="hsl(214 24% 96%)"/><circle cx="32" cy="16" r="5" fill="hsl(214 24% 96%)"/><circle cx="48" cy="16" r="5" fill="hsl(214 24% 96%)"/><circle cx="16" cy="32" r="5" fill="hsl(214 24% 96%)"/><circle cx="32" cy="32" r="6" fill="hsl(18 68% 61%)"/><circle cx="48" cy="32" r="5" fill="hsl(214 24% 96%)"/><circle cx="16" cy="48" r="5" fill="hsl(214 24% 96%)"/><circle cx="32" cy="48" r="5" fill="hsl(214 24% 96%)"/><circle cx="48" cy="48" r="5" fill="hsl(214 24% 96%)"/></g>
 </svg>
