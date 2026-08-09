@@ -1,294 +1,292 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>합정 클럽 정보 | T3B07 - 합정 클럽 가이드</title>
-    <meta name="description" content="합정 클럽 상세 정보 및 지역 가이드. 합정 클럽의 역사, 위치, 주변 인프라, 교통 정보 등 클럽 선택에 필요한 모든 데이터를 제공합니다. 합정 클럽 씬의 완벽한 이해를 위한 전문가 분석.">
-    <meta name="keywords" content="합정 클럽, 합정 클럽 정보, 합정 클럽 위치, 합정 클럽 역사, 합정 클럽 교통, 합정 클럽 주변, 합정 클럽 분석, 합정 클럽 가이드, 합정 클럽 데이터, 합정 클럽 인프라">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <link rel="canonical" href="https://hapjeong-club-guide.program-school.online/about.html">
-    <meta property="og:title" content="합정 클럽 정보 | T3B07 - 합정 클럽 가이드">
-    <meta property="og:description" content="합정 클럽 상세 정보 및 지역 가이드. 합정 클럽의 역사, 위치, 주변 인프라, 교통 정보 등 클럽 선택에 필요한 모든 데이터를 제공합니다. 합정 클럽 씬의 완벽한 이해를 위한 전문가 분석.">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root { 
-            --bg-primary: #0a0a0f; 
-            --bg-secondary: #111118; 
-            --bg-card: #16161f; 
-            --text-primary: #e0e0e0; 
-            --text-secondary: #8888aa; 
-            --accent: #ff00ff; 
-            --accent-dim: #9900aa; 
-            --border: #2a2a3a; 
-            --neon-glow: 0 0 10px rgba(255,0,255,0.3); 
-            --font-mono: 'Courier New', monospace; 
-            --font-sans: 'Arial', sans-serif; 
-        }
-        html { scroll-behavior: smooth; }
-        body { 
-            font-family: var(--font-sans); 
-            background: var(--bg-primary); 
-            color: var(--text-primary); 
-            line-height: 1.6; 
-            min-height: 100vh; 
-        }
-        img, svg { max-width: 100%; display: block; }
-        a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
-        a:hover { opacity: 0.7; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section { padding: 60px 0; border-bottom: 1px solid var(--border); }
-        .section:first-of-type { padding-top: 80px; }
-        .grid { display: grid; gap: 30px; }
-        .grid-2 { grid-template-columns: repeat(2, 1fr); }
-        .grid-3 { grid-template-columns: repeat(3, 1fr); }
-        h1 { 
-            font-family: var(--font-mono); 
-            font-size: 2.8rem; 
-            font-weight: 700; 
-            letter-spacing: -1px; 
-            text-transform: uppercase; 
-            color: var(--accent); 
-            text-shadow: var(--neon-glow); 
-            margin-bottom: 20px; 
-        }
-        h2 { 
-            font-family: var(--font-mono); 
-            font-size: 1.8rem; 
-            font-weight: 600; 
-            color: var(--text-primary); 
-            margin-bottom: 15px; 
-            border-left: 4px solid var(--accent); 
-            padding-left: 15px; 
-        }
-        h3 { 
-            font-family: var(--font-mono); 
-            font-size: 1.3rem; 
-            font-weight: 500; 
-            color: var(--accent-dim); 
-            margin-bottom: 10px; 
-        }
-        nav { 
-            background: var(--bg-secondary); 
-            border-bottom: 2px solid var(--accent); 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
-            z-index: 1000; 
-            padding: 15px 0; 
-        }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav a { color: var(--text-primary); font-family: var(--font-mono); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-        nav a:hover { color: var(--accent); }
-        .hamburger-menu { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .hamburger-menu span { width: 25px; height: 2px; background: var(--text-primary); }
-        footer { background: var(--bg-secondary); border-top: 2px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
-        .card { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border); 
-            padding: 25px; 
-            border-radius: 4px; 
-            transition: border-color 0.3s, box-shadow 0.3s; 
-        }
-        .card:hover { border-color: var(--accent); box-shadow: var(--neon-glow); }
-        .data-label { color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-        .data-value { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-primary); margin-top: 5px; }
-        .stat { display: inline-block; background: var(--accent-dim); color: var(--bg-primary); padding: 2px 8px; font-family: var(--font-mono); font-size: 0.75rem; }
-        @media (max-width: 768px) {
-            .grid-2, .grid-3 { grid-template-columns: 1fr; }
-            h1 { font-size: 2rem; }
-            .hamburger-menu { display: flex; }
-            nav .nav-links { display: none; }
-            .section { padding: 40px 0; }
-            .section:first-of-type { padding-top: 70px; }
-            a[href^="tel:"] { color: var(--accent); text-decoration: underline; }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>합정 클럽 정보 | T3B07 - 합정 클럽 가이드</title>
+ <meta name="description" content="합정 클럽 상세 정보 및 지역 가이드. 합정 클럽의 역사, 위치, 주변 인프라, 교통 정보 등 클럽 선택에 필요한 모든 데이터를 제공합니다. 합정 클럽 씬의 완벽한 이해를 위한 전문가 분석.">
+ <meta name="keywords" content="합정 클럽, 합정 클럽 정보, 합정 클럽 위치, 합정 클럽 역사, 합정 클럽 교통, 합정 클럽 주변, 합정 클럽 분석, 합정 클럽 가이드, 합정 클럽 데이터, 합정 클럽 인프라">
+ <link rel="canonical" href="https://hapjeong-club-guide.program-school.online/about.html">
+ <meta property="og:title" content="합정 클럽 정보 | T3B07 - 합정 클럽 가이드">
+ <meta property="og:description" content="합정 클럽 상세 정보 및 지역 가이드. 합정 클럽의 역사, 위치, 주변 인프라, 교통 정보 등 클럽 선택에 필요한 모든 데이터를 제공합니다. 합정 클럽 씬의 완벽한 이해를 위한 전문가 분석.">
+ <style>
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ :root { 
+ --bg-primary: #0a0a0f; 
+ --bg-secondary: #111118; 
+ --bg-card: #16161f; 
+ --text-primary: #e0e0e0; 
+ --text-secondary: #8888aa; 
+ --accent: #ff00ff; 
+ --accent-dim: #9900aa; 
+ --border: #2a2a3a; 
+ --neon-glow: 0 0 10px rgba(255,0,255,0.3); 
+ --font-mono: 'Courier New', monospace; 
+ --font-sans: 'Arial', sans-serif; 
+ }
+ html { scroll-behavior: smooth; }
+ body { 
+ font-family: var(--font-sans); 
+ background: var(--bg-primary); 
+ color: var(--text-primary); 
+ line-height: 1.6; 
+ min-height: 100vh; 
+ }
+ img, svg { max-width: 100%; display: block; }
+ a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+ a:hover { opacity: 0.7; }
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+ .section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+ .section:first-of-type { padding-top: 80px; }
+ .grid { display: grid; gap: 30px; }
+ .grid-2 { grid-template-columns: repeat(2, 1fr); }
+ .grid-3 { grid-template-columns: repeat(3, 1fr); }
+ h1 { 
+ font-family: var(--font-mono); 
+ font-size: 2.8rem; 
+ font-weight: 700; 
+ letter-spacing: -1px; 
+ text-transform: uppercase; 
+ color: var(--accent); 
+ text-shadow: var(--neon-glow); 
+ margin-bottom: 20px; 
+ }
+ h2 { 
+ font-family: var(--font-mono); 
+ font-size: 1.8rem; 
+ font-weight: 600; 
+ color: var(--text-primary); 
+ margin-bottom: 15px; 
+ border-left: 4px solid var(--accent); 
+ padding-left: 15px; 
+ }
+ h3 { 
+ font-family: var(--font-mono); 
+ font-size: 1.3rem; 
+ font-weight: 500; 
+ color: var(--accent-dim); 
+ margin-bottom: 10px; 
+ }
+ nav { 
+ background: var(--bg-secondary); 
+ border-bottom: 2px solid var(--accent); 
+ position: fixed; 
+ top: 0; 
+ width: 100%; 
+ z-index: 1000; 
+ padding: 15px 0; 
+ }
+ nav .container { display: flex; justify-content: space-between; align-items: center; }
+ nav a { color: var(--text-primary); font-family: var(--font-mono); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+ nav a:hover { color: var(--accent); }
+ .hamburger-menu { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+ .hamburger-menu span { width: 25px; height: 2px; background: var(--text-primary); }
+ footer { background: var(--bg-secondary); border-top: 2px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
+ .card { 
+ background: var(--bg-card); 
+ border: 1px solid var(--border); 
+ padding: 25px; 
+ border-radius: 4px; 
+ transition: border-color 0.3s, box-shadow 0.3s; 
+ }
+ .card:hover { border-color: var(--accent); box-shadow: var(--neon-glow); }
+ .data-label { color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+ .data-value { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-primary); margin-top: 5px; }
+ .stat { display: inline-block; background: var(--accent-dim); color: var(--bg-primary); padding: 2px 8px; font-family: var(--font-mono); font-size: 0.75rem; }
+ @media (max-width: 768px) {
+ .grid-2, .grid-3 { grid-template-columns: 1fr; }
+ h1 { font-size: 2rem; }
+ .hamburger-menu { display: flex; }
+ nav .nav-links { display: none; }
+ .section { padding: 40px 0; }
+ .section:first-of-type { padding-top: 70px; }
+ a[href^="tel:"] { color: var(--accent); text-decoration: underline; }
+ }
+ </style>
   <meta property="og:url" content="https://hapjeong-club-guide.program-school.online/about.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="/">T3B07</a>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-links">
-                <a href="/">비교</a>
-                <a href="/info">정보</a>
-                <a href="/guide">가이드</a>
-            </div>
-        </div>
-    </nav>
+ <nav>
+ <div class="container">
+ <a href="/">T3B07</a>
+ <div class="hamburger-menu">
+ 
+ 
+ 
+ </div>
+ <div class="nav-links">
+ <a href="/">비교</a>
+ <a href="/info">정보</a>
+ <a href="/guide">가이드</a>
+ </div>
+ </div>
+ </nav>
 
-    <main>
-        <!-- 히어로 섹션 -->
-        <section class="section">
-            <div class="container">
-                <h1>합정 클럽 정보</h1>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 30px;">
-                    합정 클럽 씬에 대한 포괄적인 데이터와 지역 분석. 2024년 수집된 12개 클럽의 위치, 역사, 운영 데이터를 기반으로 한 객관적 정보 제공.
-                </p>
-                <div class="grid grid-3" style="margin-top: 30px;">
-                    <div class="card">
-                        <div class="data-label">활성 클럽</div>
-                        <div class="data-value">12개</div>
-                        <div class="stat">2024 기준</div>
-                    </div>
-                    <div class="card">
-                        <div class="data-label">평균 운영 기간</div>
-                        <div class="data-value">4.8년</div>
-                        <div class="stat">±1.2년</div>
-                    </div>
-                    <div class="card">
-                        <div class="data-label">주간 방문객</div>
-                        <div class="data-value">8,500명</div>
-                        <div class="stat">추정치</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <main>
+ <!-- 히어로 섹션 -->
+ <section class="section">
+ <div class="container">
+ <h1>합정 클럽 정보</h1>
+ <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 30px;">
+ 합정 클럽 씬에 대한 포괄적인 데이터와 지역 분석. 2024년 수집된 12개 클럽의 위치, 역사, 운영 데이터를 기반으로 한 객관적 정보 제공.
+ </p>
+ <div class="grid grid-3" style="margin-top: 30px;">
+ <div class="card">
+ <div class="data-label">활성 클럽</div>
+ <div class="data-value">12개</div>
+ <div class="stat">2024 기준</div>
+ </div>
+ <div class="card">
+ <div class="data-label">평균 운영 기간</div>
+ <div class="data-value">4.8년</div>
+ <div class="stat">±1.2년</div>
+ </div>
+ <div class="card">
+ <div class="data-label">주간 방문객</div>
+ <div class="data-value">8,500명</div>
+ <div class="stat">추정치</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- 지역 분석 -->
-        <section class="section">
-            <div class="container">
-                <h2>지역 인프라 분석</h2>
-                <div class="grid grid-2" style="margin-top: 20px;">
-                    <div class="card">
-                        <h3>교통 접근성</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 15px;">
-                            합정역 2호선·6호선 환승역 기준 도보 5분 이내 클럽 8개(66.7%). 
-                            버스 노선 14개 경유, 심야버스 3개 노선 운행. 
-                            주차 가능 클럽 4개(33.3%), 평균 주차비 8,000원/시간.
-                        </p>
-                        <div class="data-label">평균 도보 거리</div>
-                        <div class="data-value">4.2분</div>
-                    </div>
-                    <div class="card">
-                        <h3>주변 시설 밀집도</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 15px;">
-                            클럽 반경 500m 내 편의시설: 음식점 47개, 주점 23개, 카페 18개, 편의점 9개. 
-                            클럽 간 평균 거리 180m로 높은 밀집도 유지. 
-                            주요 클럽 거리 구간: 합정역 2번 출구~월드컵로 14길.
-                        </p>
-                        <div class="data-label">밀집 구역 면적</div>
-                        <div class="data-value">0.8km²</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- 지역 분석 -->
+ <section class="section">
+ <div class="container">
+ <h2>지역 인프라 분석</h2>
+ <div class="grid grid-2" style="margin-top: 20px;">
+ <div class="card">
+ <h3>교통 접근성</h3>
+ <p style="color: var(--text-secondary); margin-bottom: 15px;">
+ 합정역 2호선·6호선 환승역 기준 도보 5분 이내 클럽 8개(66.7%). 
+ 버스 노선 14개 경유, 심야버스 3개 노선 운행. 
+ 주차 가능 클럽 4개(33.3%), 평균 주차비 8,000원/시간.
+ </p>
+ <div class="data-label">평균 도보 거리</div>
+ <div class="data-value">4.2분</div>
+ </div>
+ <div class="card">
+ <h3>주변 시설 밀집도</h3>
+ <p style="color: var(--text-secondary); margin-bottom: 15px;">
+ 클럽 반경 500m 내 편의시설: 음식점 47개, 주점 23개, 카페 18개, 편의점 9개. 
+ 클럽 간 평균 거리 180m로 높은 밀집도 유지. 
+ 주요 클럽 거리 구간: 합정역 2번 출구~월드컵로 14길.
+ </p>
+ <div class="data-label">밀집 구역 면적</div>
+ <div class="data-value">0.8km²</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- 클럽 역사 -->
-        <section class="section">
-            <div class="container">
-                <h2>클럽 역사 및 연혁</h2>
-                <div class="grid grid-3" style="margin-top: 20px;">
-                    <div class="card">
-                        <h3>2015~2018: 형성기</h3>
-                        <p style="color: var(--text-secondary);">
-                            합정 클럽 씬의 태동기. 최초 3개 클럽(스트릿, 언더그라운드 장르 중심) 
-                            오픈. 평균 수용 인원 150명. 홍대 클럽 씬의 확장으로 인한 자연적 형성.
-                        </p>
-                        <div class="data-label">최초 오픈</div>
-                        <div class="data-value">2015.03</div>
-                    </div>
-                    <div class="card">
-                        <h3>2019~2021: 성장기</h3>
-                        <p style="color: var(--text-secondary);">
-                            클럽 수 7개로 증가. EDM, 하우스 장르 클럽 진입. 
-                            평균 수용 인원 250명. 팬데믹 기간 3개 클럽 폐쇄, 2개 신규 오픈으로 재편.
-                        </p>
-                        <div class="data-label">최다 오픈</div>
-                        <div class="data-value">2020.08</div>
-                    </div>
-                    <div class="card">
-                        <h3>2022~2024: 안정기</h3>
-                        <p style="color: var(--text-secondary);">
-                            현재 12개 클럽 운영 중. 장르 다양화(테크노, 힙합, 인디 등). 
-                            평균 수용 인원 320명. 연간 방문객 성장률 15%. 
-                            합정 클럽 씬의 독자적 정체성 확립.
-                        </p>
-                        <div class="data-label">현재 클럽 수</div>
-                        <div class="data-value">12개</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- 클럽 역사 -->
+ <section class="section">
+ <div class="container">
+ <h2>클럽 역사 및 연혁</h2>
+ <div class="grid grid-3" style="margin-top: 20px;">
+ <div class="card">
+ <h3>2015~2018: 형성기</h3>
+ <p style="color: var(--text-secondary);">
+ 합정 클럽 씬의 태동기. 최초 3개 클럽(스트릿, 언더그라운드 장르 중심) 
+ 오픈. 평균 수용 인원 150명. 홍대 클럽 씬의 확장으로 인한 자연적 형성.
+ </p>
+ <div class="data-label">최초 오픈</div>
+ <div class="data-value">2015.03</div>
+ </div>
+ <div class="card">
+ <h3>2019~2021: 성장기</h3>
+ <p style="color: var(--text-secondary);">
+ 클럽 수 7개로 증가. EDM, 하우스 장르 클럽 진입. 
+ 평균 수용 인원 250명. 팬데믹 기간 3개 클럽 폐쇄, 2개 신규 오픈으로 재편.
+ </p>
+ <div class="data-label">최다 오픈</div>
+ <div class="data-value">2020.08</div>
+ </div>
+ <div class="card">
+ <h3>2022~2024: 안정기</h3>
+ <p style="color: var(--text-secondary);">
+ 현재 12개 클럽 운영 중. 장르 다양화(테크노, 힙합, 인디 등). 
+ 평균 수용 인원 320명. 연간 방문객 성장률 15%. 
+ 합정 클럽 씬의 독자적 정체성 확립.
+ </p>
+ <div class="data-label">현재 클럽 수</div>
+ <div class="data-value">12개</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- 운영 데이터 -->
-        <section class="section">
-            <div class="container">
-                <h2>운영 데이터 분석</h2>
-                <div class="grid grid-2" style="margin-top: 20px;">
-                    <div class="card">
-                        <h3>운영 시간 패턴</h3>
-                        <ul style="color: var(--text-secondary); list-style: none;">
-                            <li style="margin-bottom: 10px;">• 평일 오픈: 20:00~22:00 (92% 클럽)</li>
-                            <li style="margin-bottom: 10px;">• 주말 오픈: 19:00~21:00 (100% 클럽)</li>
-                            <li style="margin-bottom: 10px;">• 평균 마감: 04:00~06:00 (주말 기준)</li>
-                            <li style="margin-bottom: 10px;">• 심야 운영(06:00 이후): 3개 클럽(25%)</li>
-                        </ul>
-                        <div class="data-label">평균 운영 시간</div>
-                        <div class="data-value">8.2시간</div>
-                    </div>
-                    <div class="card">
-                        <h3>입장료 구조</h3>
-                        <ul style="color: var(--text-secondary); list-style: none;">
-                            <li style="margin-bottom: 10px;">• 평일 입장료: 12,000원~18,000원</li>
-                            <li style="margin-bottom: 10px;">• 주말 입장료: 18,000원~25,000원</li>
-                            <li style="margin-bottom: 10px;">• 여성 할인 적용: 8개 클럽(66.7%)</li>
-                            <li style="margin-bottom: 10px;">• 사전 예약 할인: 5개 클럽(41.7%)</li>
-                        </ul>
-                        <div class="data-label">평균 입장료</div>
-                        <div class="data-value">19,500원</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- 운영 데이터 -->
+ <section class="section">
+ <div class="container">
+ <h2>운영 데이터 분석</h2>
+ <div class="grid grid-2" style="margin-top: 20px;">
+ <div class="card">
+ <h3>운영 시간 패턴</h3>
+ <ul style="color: var(--text-secondary); list-style: none;">
+ <li style="margin-bottom: 10px;">• 평일 오픈: 20:00~22:00 (92% 클럽)</li>
+ <li style="margin-bottom: 10px;">• 주말 오픈: 19:00~21:00 (100% 클럽)</li>
+ <li style="margin-bottom: 10px;">• 평균 마감: 04:00~06:00 (주말 기준)</li>
+ <li style="margin-bottom: 10px;">• 심야 운영(06:00 이후): 3개 클럽(25%)</li>
+ </ul>
+ <div class="data-label">평균 운영 시간</div>
+ <div class="data-value">8.2시간</div>
+ </div>
+ <div class="card">
+ <h3>입장료 구조</h3>
+ <ul style="color: var(--text-secondary); list-style: none;">
+ <li style="margin-bottom: 10px;">• 평일 입장료: 12,000원~18,000원</li>
+ <li style="margin-bottom: 10px;">• 주말 입장료: 18,000원~25,000원</li>
+ <li style="margin-bottom: 10px;">• 여성 할인 적용: 8개 클럽(66.7%)</li>
+ <li style="margin-bottom: 10px;">• 사전 예약 할인: 5개 클럽(41.7%)</li>
+ </ul>
+ <div class="data-label">평균 입장료</div>
+ <div class="data-value">19,500원</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- FAQ -->
-        <section class="section">
-            <div class="container">
-                <h2>자주 묻는 질문</h2>
-                <div class="grid" style="margin-top: 20px;">
-                    <div class="card">
-                        <h3>합정 클럽의 주요 장르는 무엇인가요?</h3>
-                        <p style="color: var(--text-secondary);">
-                            2024년 기준, 합정 클럽의 장르 분포는 EDM/하우스 33%, 힙합/R&B 25%, 
-                            테크노 17%, 인디/얼터너티브 17%, 혼합 장르 8%입니다. 
-                            홍대 대비 테크노 비중이 높은 것이 특징입니다.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>합정 클럽의 연령대는 어떻게 되나요?</h3>
-                        <p style="color: var(--text-secondary);">
-                            주요 연령대는 25~34세(58%), 19~24세(27%), 35세 이상(15%) 순입니다. 
-                            홍대 클럽 대비 평균 연령이 3.2세 높으며, 직장인 비중이 62%로 나타납니다.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>클럽 간 이동이 용이한가요?</h3>
-                        <p style="color: var(--text-secondary);">
-                            주요 클럽 간 평균 도보 거리는 180m로, 12개 클럽 중 10개가 도보 5분 권역에 위치합니다. 
-                            합정역 2번 출구에서 월드컵로 14길까지의 메인 스트리트에 7개 클럽이 밀집해 있어 
-                            효율적인 이동이 가능합니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+ <!-- FAQ -->
+ <section class="section">
+ <div class="container">
+ <h2>자주 묻는 질문</h2>
+ <div class="grid" style="margin-top: 20px;">
+ <div class="card">
+ <h3>합정 클럽의 주요 장르는 무엇인가요?</h3>
+ <p style="color: var(--text-secondary);">
+ 2024년 기준, 합정 클럽의 장르 분포는 EDM/하우스 33%, 힙합/R&B 25%, 
+ 테크노 17%, 인디/얼터너티브 17%, 혼합 장르 8%입니다. 
+ 홍대 대비 테크노 비중이 높은 것이 특징입니다.
+ </p>
+ </div>
+ <div class="card">
+ <h3>합정 클럽의 연령대는 어떻게 되나요?</h3>
+ <p style="color: var(--text-secondary);">
+ 주요 연령대는 25~34세(58%), 19~24세(27%), 35세 이상(15%) 순입니다. 
+ 홍대 클럽 대비 평균 연령이 3.2세 높으며, 직장인 비중이 62%로 나타납니다.
+ </p>
+ </div>
+ <div class="card">
+ <h3>클럽 간 이동이 용이한가요?</h3>
+ <p style="color: var(--text-secondary);">
+ 주요 클럽 간 평균 도보 거리는 180m로, 12개 클럽 중 10개가 도보 5분 권역에 위치합니다. 
+ 합정역 2번 출구에서 월드컵로 14길까지의 메인 스트리트에 7개 클럽이 밀집해 있어 
+ 효율적인 이동이 가능합니다.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 T3B07 합정 클럽 비교 가이드 | 데이터 기반 분석 | ver.2.4</p>
-            <p style="margin-top: 10px;">문의: <a href="tel:02-1234-5678">02-1234-5678</a> | 이메일: info@t3b07.com</p>
-        </div>
-    </footer>
+ <footer>
+ <div class="container">
+ <p>© 2024 T3B07 합정 클럽 비교 가이드 | 데이터 기반 분석 | ver.2.4</p>
+ <p style="margin-top: 10px;">문의:</p>
+ </div>
+ </footer>
 </body>
 </html>
